@@ -1,132 +1,84 @@
-        <!DOCTYPE html>
-        <html>
+<!DOCTYPE html>
+<html lang="en">
 
-        <script>
-          window.twttr = (function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0],
-            t = window.twttr || {};
-          if (d.getElementById(id)) return t;
-          js = d.createElement(s);
-          js.id = id;
-          js.src = "https://platform.twitter.com/widgets.js";
-          fjs.parentNode.insertBefore(js, fjs);
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Homepage - Simon Rolph</title>
+    <link href="/bootstrap.min.css" rel="stylesheet">
+    <link href="/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="/starter-template.css" rel="stylesheet">
+    <script src="/ie-emulation-modes-warning.js"></script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+</head>
 
-          t._e = [];
-          t.ready = function(f) {
-            t._e.push(f);
-          };
-
-          return t;
-        }(document, "script", "twitter-wjs"));
-        </script>
-
-
-        <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Simon Rolph // Homepage</title>
-        <meta name="description" content="Hi, welcome to my internet space. I'm an undergraduate student at the University of Exeter, Penryn Campus studying BSc Conservation Biology and Ecology">
-        <link rel="stylesheet" href="main.css">
-        </head>
-
-        <body>
-        <ul>
-            <li><a class="active" href="index.html">Home</a></li>
-            <li style="background-color: #285562"><a target="_blank" href="https://twitter.com/simon_rolph">Twitter</a></li>
-            <li style="background-color: #6f2a27"><a target="_blank" href="https://www.youtube.com/user/GrumpyCustard">Youtube</a></li>       
-            <li style="background-color: #262e5d"><a target="_blank" href="https://uk.linkedin.com/in/simon-rolph-98390098">Linkedin</a></li>
-        </ul>
-            <br>
-            <br>
-        <h1>Simon Rolph - Homepage</h1><div><h2>A quick introduction...</h2>
-        <p>Hi, welcome to my internet space. I'm a final year undergraduate student at the University of Exeter, Penryn Campus studying <a target="_blank" href="http://www.exeter.ac.uk/undergraduate/degrees/biosciences/conservation/">BSc Conservation Biology and Ecology</a>. I see the huge potential this era of technology can bring to conservation and I have developed a broad skills set including ecological modelling and data analysis in R, webdesign, video editing and filmmaking.</p>
-
-        <p>I created this website in January this year and it is an ongoing project to provide a platform to share my ideas and experience, and as a hands-on approach to learning HTML and webdesign. This website will always be evolving and improving so do check back or follow me on Twitter for updates!</p>
-<br>
-        <h2>Academic Interests</h2>
-
-        <div id="images">
-        <img src="pictures/modelling_small.jpg"style="width:300px;height:225px"><img src="pictures/wildlife_small.jpg"style="width:300px;height:225px"><img src="pictures/campus_small.jpg"style="width:300px;height:225px">
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a class="navbar-brand" href="/index.html">Simon Rolph</a> </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/overview.html">PhD Overview</a></li>
+                    <li><a href="/cv.html">CV</a></li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
         </div>
-        
-        <table style="width:100%">
-            <tr>
-                <th>Ecological Modelling</th>
-                <th>Wildlife and Field Techniques</th>		
-                <th>My Degree</th>
-            </tr>
-            <tr>
-                <td>Using R, MATLAB and Python to produce mathematical models of ecological systems, currently working with population projection matrices. <a href="modelling.html">Read more...</a></td>
-                <td>I have a fascination with the local wildlife, I remain a generalist but feel most confident with native plants and birds. I am always working to improve my ID skillset, using online communities such as twitter and ispot. (full page coming soon) </td> 
-                <td>An outline of the modules taken and the content of my degree at the University of Exeter; conservation biology and ecology. <a href="degree.html">Read more...</a></td>
-            </tr>
-        </table>
-        
-
-        <br><br>
-        <h2>Expeditions and Field Courses</h2>
-
-        <div id="images">
-        <img src="pictures/tenerife_small.jpg"style="width:300px;height:225px"><img src="pictures/iceland_small.jpg"style="width:300px;height:225px"><img src="pictures/perhentian_small.jpg"style="width:300px;height:225px">
+    </nav>
+    <div class="background">
+        <div class="layer">
+            <div class="container">
+                <br>
+                <h1>Simon Rolph</h1>
+                <h3>PhD Student at the University of Sheffield</h3>
+                <br> </div>
         </div>
-            
-        <table style="width:100%">
-            <tr>
-                <th>Tenerife Field Course 2016</th>
-                <th>Iceland Field Course 2015</th>		
-                <th>Perhentian Islands Expedition 2014</th>
-            </tr>
-            <tr>
-                <td>Exploring the island of Tenerife, focusing on endemism, tourism/biodiversity conflicts and ecological changes over gradients. <a href="fieldtenerife.html">Read more...</a></td>
-                <td>A fieldwork based project into macroinvertebrate biodiversity in geothermally heated streams. (full page coming soon)</td> 
-                <td>A five-week expedition to Malaysia with two other undergraduates to re-assess the viability of ecological studies undertaken in 2005 by Coral Cay Conservation. Read the full report <a href=http://www.academia.edu/19940000/The_Perhentian_Islands_Malaysia_2014_Feasibility_Study_Report>here</a>.</td>
-            </tr>
-        </table>
-<br><br>
-        <h2>Volunteering</h2>
-
-        <div id="images">
-        <img src="pictures/ecosoc_small.jpg"style="width:300px;height:225px"><img src="pictures/aquarium_small.jpg"style="width:300px;height:225px"><img src="pictures/cbmwc_small.jpg"style="width:300px;height:225px">
+    </div>
+    <div class="container">
+        <h4>About my research</h4>
+        <p>I am a member of Salgo Team, the research group of Rob Salguero-Gómez. The group's ultimate goal is to develop an integrative academic research plan where we use molecular, anatomic and physiological approaches to examine demographic aspects of an organism' life cycle through a combination angles including field and lab work, as well as ecological modeling and comparative biology.</p>
+        <p>My research is taking a data-driven and modelling approach to investigating life history strategies across the tree of life. My initial approach will be working with the COMPADRE plant matrix database and COMADRE plant matrix database to look at broad scale trends in life history strategies.</p>
+        <p>One of the key aims of my PhD is to develop hierarchical models to predict optimal life history strategies as a function of current and future climatic conditions using game theory, differential equations and integro- difference equations.</p> <a target="_blank" href="https://sites.google.com/site/robresearchsite/">Salgo Team </a> | <a target="_blank" href="https://twitter.com/salgoteam">Follow @salgoteam</a> | <a href="overview.html">Read more about my PhD...</a>
+        <hr>
+        <h4>COMPADRE & COMADRE</h4>
+        <p>In addition to using the data in COMPADRE & COMADRE, I have been helping to develop the latest iteration of the database; migrating to an online relational database and Flask (Python-based framework) app. This started with the work I did in the summer of 2016 during internship with the Exeter node of the COMPADRE & COMADRE network. This is a project spearheaded by Dave Hodgson's research group in the Cornwall Campus of The University of Exeter and I continue to work on it alongside my PhD as a collaboration. We hope that the project will be online summer 2017. </p>
+        <p><a target="_blank" href="https://github.com/Spandex-at-Exeter/demography_database">View the project on github</a> | <a href="http://www.compadre-db.org/">COMPADRE database homepage</a></p>
+        <hr>
+        <h4>Occasionally, I make videos!</h4>
+        <div class=row>
+            <div class="col-md-8">
+                <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed/YkVsQNUUBvc' frameborder='0' allowfullscreen></iframe></div>
+            </div>
+            <div class="col-xs-4">
+                <script src="https://apis.google.com/js/platform.js"></script>
+                <div class="g-ytsubscribe" data-channel="GrumpyCustard" data-layout="full" data-count="default"></div>
+            </div>
+            <hr>
         </div>
-            
-        <table style="width:100%">
-            <tr>
-                <th>EcoSoc Comittee</th>
-                <th>Falmouth Aquarium</th>		
-                <th>Cardigan Bay Marine Wildlife Centre</th>
-            </tr>
-            <tr>
-                <td>My role on the EcoSoc comittee included running wildlife walks, identification session and working with a number of wildlife organisations such as Natural England and ZSL. <a href="volunteering.html#ecosoc">Read more...</a></td>
-                <td>Lead volunteer at Falmouth Aquarium until its closure carring out feeding, maintenence and talking to customers about the livestock. <a href="volunteering.html#falaqua">Read more...</a></td> 
-                <td>Four month placement as a bottlenose dolphin research assistant, carrying out cetacean surveys and interpretation for general public. <a href="volunteering.html#cbmwc">Read more...</a></td>
-            </tr>
-        </table>
-<br><br>
-        <h2>Hobbies and Interests</h2>
+        <hr>
+        <a href="https://twitter.com/simon_rolph" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @simon_rolph</a>
+                    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <a class="github-button" href="https://github.com/simonrolph" data-style="mega" aria-label="Follow @simonrolph on GitHub">Follow @simonrolph</a>
+        <br>
+    <br>
+    </div>
+    
+    <!-- /.container -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
+    </script>
+    <script src="/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="/ie10-viewport-bug-workaround.js"></script>
+</body>
 
-        <div id="images">
-        <img src="pictures/tanks_small.jpg"style="width:300px;height:225px"><img src="pictures/film_small.jpg"style="width:300px;height:225px"><img src="pictures/music_small.jpg"style="width:300px;height:225px">
-        </div>
-            
-        <table style="width:100%">
-            <tr>
-                <th>Aquaria</th>
-                <th>Filmmaking</th>		
-                <th>Music Composition</th>
-            </tr>
-            <tr>
-                <td>The story of my long running obsession with putting things behind glass, and all the various projects I have done over the years. <a href="aquaria.html">Read more...</a></td>
-                <td>Attempting to capture nature's beauty with a Canon SX700hs and Zoom H2n microphone. <a href="filmmaking.html">Read more...</a></td> 
-                <td>A creative outlet for when I want to make noises. Check out my soundcloud <a href="https://soundcloud.com/junctioneer"> here</a> </td>
-            </tr>
-        </table>
-            <br>
-        <h2>Latest twitter updates</h2>
-
-        <a class="twitter-grid" href="https://twitter.com/simon_rolph/timelines/680478229795352576" data-limit="8" width="900" height="400" data-chrome="nofooter" >twitter feed loading... </a>
-        </div>      
-        </body>
-        </html>
-        <!--
-
-        -->
+</html>
