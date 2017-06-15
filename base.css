@@ -28,19 +28,13 @@ p {
 }
 
 .navbar-inverse {
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#258dc8+0,258dc8+100;Blue+Flat+%231 */
-    background: rgb(37, 141, 200);
-    /* Old browsers */
-    background: -moz-linear-gradient(top, rgba(37, 141, 200, 1) 0%, rgba(37, 141, 200, 1) 100%);
-    /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, rgba(37, 141, 200, 1) 0%, rgba(37, 141, 200, 1) 100%);
-    /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, rgba(37, 141, 200, 1) 0%, rgba(37, 141, 200, 1) 100%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#258dc8', endColorstr='#258dc8', GradientType=0);
-    /* IE6-9 */
+    background: rgb(74, 78, 71);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.1);
     border-style: none;
+}
+
+.shadowy {
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.1), 0 10px 20px 0 rgba(0, 0, 0, 0.1);
 }
 
 .info_box {
