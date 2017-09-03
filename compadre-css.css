@@ -1,0 +1,102 @@
+/* infobox etc */
+
+
+
+.centred{
+    text-align: center;
+}
+
+.info_box_empty{
+    padding: 1em;
+    margin-bottom: 20px;
+    border-width:3px;	
+    border-style:dashed;
+    border-color: #d0d0d0;
+    color: #8e8e8e;
+}
+
+.info_box_compadrino{
+    padding: 1em;
+    margin-bottom: 20px;
+    border-width:3px;
+    border-style:solid;
+    border-color: #d0d0d0;
+    color: #8e8e8e;
+}
+
+.info_box_red{
+    background-color: #f5e7de;
+    padding: 1em;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.info_box_green{
+    background-color: #d9e5c7;
+    padding: 1em;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.info_box_transparent{
+    background-color: hsla(0, 0%, 100%, 0.68);
+    padding: 0.5em;
+    margin-bottom: 20px;
+}
+
+.population_box{
+    background-color: #e2ebf0;
+    padding: 1em;
+    margin-bottom: 20px;
+    border-left: thick solid #e2ebf0; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.publication_row{
+    border-left: thick solid #e2ebf0; 
+}
+
+matrix_cont{
+    background-color: #e2f0e5; 
+}
+
+
+.panel > .panel-heading {
+
+    background-color: #c0d2e2;
+    color: black;
+    
+}
+
+.panel-heading {
+    cursor: pointer;
+}
+
+.label-default{
+    color: black;
+    background-color: #ffffff;
+    font-weight: normal;
+}
+
+
+.matA > table
+{
+    text-align:center; 
+    table-layout: fixed;
+    vertical-align:middle;
+    width: 100%;
+    
+}
+
+.matClasses > table
+{
+    text-align:center;
+    table-layout: fixed;
+    vertical-align:middle;
+    width: 100%;
+    margin-bottom: 0px;
+    background-color: beige;
+    font-weight: bold;
+}
+
+.nounderline:hover { text-decoration: none }
