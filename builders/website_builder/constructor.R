@@ -18,5 +18,5 @@ for (ii in 1:1000000){
     write(page,file = paste("../../",files[i],sep = ""))
     
   }
-  Sys.sleep(3)
+  Sys.sleep(1)
 }
