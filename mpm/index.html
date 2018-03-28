@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>MPM thing</title>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="styles.css" rel=stylesheet> </head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container"> <a class="navbar-brand" href="#">MPM thingy</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <!--
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active"> <a class="nav-link" href="#">Home
+                <span class="sr-only">(current)</span>
+              </a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="#">About</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="#">Services</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="#">Contact</a> </li>
+                </ul>
+-->
+            </div>
+        </div>
+    </nav>
+    <!-- Page Content -->
+    <div class="container">
+        <br>
+        <h1>MPM thing</h1>
+        <br>
+        <h3>Matrix population model</h3>
+        <p>Click on matrix values to edit them</p>
+        <table class="table" id="mpm">
+            <tbody>
+                <tr>
+                    <th></th>
+                    <th>Stage 1</th>
+                    <th>Stage 2</th>
+                    <th>Stage 3</th>
+                </tr>
+                <tr>
+                    <th>Stage 1</th>
+                    <td>0.3</td>
+                    <td>0</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <th>Stage 2</th>
+                    <td>0.3</td>
+                    <td>0.4</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <th>Stage 3</th>
+                    <td>0</td>
+                    <td>0.3</td>
+                    <td>0.2</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <button onclick="simulate()" type="button" class="btn btn-primary btn-lg btn-block">Project 1 time step </button>
+        <br>
+        
+        <h3>Population vector</h3>
+        <p>Click on vector values to edit them</p>
+        <table class="table" id="vector">
+            <tbody>
+                <tr>
+                    <th>Stage 1</th>
+                    <th>Stage 2</th>
+                    <th>Stage 3</th>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>3</td>
+                    <td>6</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <h3>1 step growth rate:</h3>
+        
+        <p id="growthrate">?</p>
+        
+    </div>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="p5/p5.min.js"></script>
+    <script src="math.js"> </script>
+    <script src="editable-table-master/mindmup-editabletable.js"></script>
+    <script>
+        $('#mpm').editableTableWidget();
+        $('#vector').editableTableWidget();
+    </script>
+    <script>
+        
+        function simulate() {
+            //gets table
+            var oTable = document.getElementById('mpm');
+            var oVector = document.getElementById('vector');
+            //gets rows of table
+            var dimension = oTable.rows.length-1;
+            // array with mpm values        
+            var mpmdata = math.zeros(dimension, dimension); 
+            var popvector = math.zeros(dimension);
+            //loops through rows    
+            for (i = 0; i < dimension; i++) {
+                //gets cells of current row  
+                var oCells = oTable.rows.item(i+1).cells;
+                var oVecVal = oVector.rows.item(1).cells.item(i).innerHTML;
+                popvector.subset(math.index(i), oVecVal);
+                //loops through each cell in current row
+                for (var j = 0; j < dimension; j++) {
+                    // get your cell info here
+                    var cellVal = oCells.item(j+1).innerHTML;
+                    mpmdata.subset(math.index(i, j), cellVal);
+                    
+                }
+            }
+            
+            
+            popvector2 = math.multiply(mpmdata,popvector); 
+            growthrate = math.sum(popvector2)/math.sum(popvector)
+            document.getElementById('growthrate').innerHTML = growthrate;
+            
+            popvector = popvector2
+            
+            for (i = 0; i < dimension; i ++){
+                oVector.rows.item(1).cells.item(i).innerHTML = popvector.subset(math.index(i));
+            }
+            
+            
+            
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+    </script>
+</body>
+
+</html>
